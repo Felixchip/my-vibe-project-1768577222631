@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts loaded via index.html for better performance */
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 35 100% 85%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 35 100% 85%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 35 100% 85%;
+
+    --primary: 35 100% 55%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 120 60% 40%;
+    --secondary-foreground: 0 0% 4%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 35 30% 55%;
+
+    --accent: 15 100% 50%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 80% 45%;
+    --destructive-foreground: 35 100% 90%;
+
+    --border: 35 40% 18%;
+    --input: 0 0% 10%;
+    --ring: 35 100% 55%;
+
+    --radius: 0.25rem;
+
+    /* Retro Tetromino colors - warm phosphor palette */
+    --tetro-i: 35 100% 55%;
+    --tetro-o: 50 100% 50%;
+    --tetro-t: 280 50% 50%;
+    --tetro-s: 120 60% 40%;
+    --tetro-z: 0 70% 50%;
+    --tetro-j: 200 60% 45%;
+    --tetro-l: 25 100% 50%;
+
+    /* Retro glow effects - warm amber */
+    --glow-amber: 0 0 15px hsl(35 100% 55% / 0.6), 0 0 30px hsl(35 100% 55% / 0.3);
+    --glow-green: 0 0 15px hsl(120 60% 40% / 0.6), 0 0 30px hsl(120 60% 40% / 0.3);
+    --glow-orange: 0 0 15px hsl(15 100% 50% / 0.6), 0 0 30px hsl(15 100% 50% / 0.3);
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 35 100% 85%;
+  }
+}
+
+/* CRT Scanline effect */
+.game-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    hsl(0 0% 0% / 0.03) 2px,
+    hsl(0 0% 0% / 0.03) 4px
+  );
